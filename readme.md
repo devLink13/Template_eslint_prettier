@@ -2,6 +2,34 @@
 
 Este guia fornece instruções passo a passo para instalar e configurar o Eslint e o Prettier em um projeto Node.js.
 
+## Índice
+
+- [Iniciar um package.json](#iniciar-um-packagejson)
+- [Instalar Eslint e Prettier](#instalar-eslint-e-prettier)
+- [Instalar o Prettier e os plughins do Eslint](#instalar-o-prettier-e-os-plughins-do-eslint)
+- [Adicionar o plugin do prettier ao Eslint](#adicionar-o-plugin-do-prettier-ao-eslint)
+- [Criar o arquivo de configuração do Prettier](#criar-o-arquivo-de-configuração-do-prettier)
+  - [Sugestões de Configuração do Prettier](#sugestões-de-configuração-do-prettier)
+  - [Regras de Formatação Básicas](#regras-de-formatação-básicas)
+  - [Regras de Vírgulas e Quebras](#regras-de-vírgulas-e-quebras)
+  - [Regras de Quebra de Linha](#regras-de-quebra-de-linha)
+  - [Configurações Específicas](#configurações-específicas)
+- [Como funciona o EsLint](#como-funciona-o-eslint)
+  - [Como Funcionam as Regras do ESLint](#como-funcionam-as-regras-do-eslint)
+    - [Estrutura de Configuração](#1-estrutura-de-configuração)
+    - [Níveis de Regras](#2-níveis-de-regras)
+    - [Exemplo de Configuração](#3-exemplo-de-configuração)
+    - [Exemplo de Regras Customizadas](#4-exemplo-de-regras-customizadas)
+    - [Ordem de Precedência](#5-ordem-de-precedência)
+- [Regras ESLint Recomendadas por Categoria](#regras-eslint-recomendadas-por-categoria)
+  - [Erros Críticos](#1-erros-críticos)
+  - [Melhores Práticas](#2-melhores-práticas)
+  - [Formatação (Compatível com Prettier)](#3-formatação-compatível-com-prettier)
+  - [Qualidade de Código](#4-qualidade-de-código)
+  - [Nomenclatura](#5-nomenclatura)
+  - [Outras Boas Práticas](#6-outras-boas-práticas)
+- [Usar o arquivo .eslintignore](#usar-o-arquivo-eslintignore)
+
 ## Iniciar um package.json
 
 Primeiro, você precisa iniciar um novo projeto Node.js ou usar um existente. Para iniciar um novo `package.json`, execute o seguinte comando no terminal:
